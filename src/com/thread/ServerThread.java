@@ -2,6 +2,7 @@ package com.thread;
 
 import com.request.Request;
 import com.response.Response;
+import com.service.MyService;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -24,6 +25,7 @@ public class ServerThread implements Runnable{
             e.printStackTrace();
         }
 
+        MyService.service(request,response);
     }
 
     public ServerThread(Socket socket){
