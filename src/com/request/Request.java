@@ -33,7 +33,7 @@ public class Request {
     }
 
 
-    private Map<String,String>body;//存储解析后的，请求体中的键值对
+    private Map<String,String>body;//存储解析后的，请求体中的键值对(username:password)
     //从解析后的请求体中根据key获取对应的value
     public String getBodyParam(String key){
         return body.get(key);
