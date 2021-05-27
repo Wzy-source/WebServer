@@ -35,10 +35,7 @@ public class Server {
     public static void putUpdate(String key,String date){ update.put(key,date); }
     public static String getUpdate(String key){ return update.get(key); }
 
-    //缓存中是否含有指定的用户信息
-    public static boolean contains(String key,String value){
-        return value.equals(user.get(key));
-    }
+
 
     //缓存清理线程，定期清楚，间隔15分钟
     public static class UserMapClearThread implements Runnable{

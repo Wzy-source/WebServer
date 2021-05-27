@@ -11,7 +11,7 @@ public abstract class MyService {
     public abstract void doPost(Request request,Response response);
     public abstract void doGet(Request request,Response response);
 
-    public void service(Request request, Response response){
+    public static void service(Request request, Response response){
         if(Server.ServerIsClosed()){
             //如果服务器已关闭，向Response写入状态码500和错误信息，结束流程
             //todo
@@ -64,7 +64,7 @@ public abstract class MyService {
 
     }
 
-    public boolean is304(Request request){
+    public static boolean is304(Request request){
         String value=null;
 
         //304必须是GET
